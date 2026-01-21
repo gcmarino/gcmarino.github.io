@@ -8,6 +8,7 @@ import About from './components/About/About'
 import Experience from './components/Experience/Experience'
 import Header from './components/Header/Header'
 import Scroller from './components/Scroller/Scroller'
+import IA from './components/IA/IA';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
       <Header />
       <About />
       <Experience />
+      <IA />
     </main>
   )
 }
