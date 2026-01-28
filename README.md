@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# GC Marino — Sitio personal / Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositorio del sitio personal y portafolio de Gian Carlo Marino Polo, implementado con React + TypeScript y Vite.
 
-Currently, two official plugins are available:
+Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Sitio web estático con secciones de perfil, tecnologías, proyectos y blog.
+- Usa React para la interfaz, TypeScript para tipado, Vite como bundler y HMR.
+- Incluye utilidades visuales: TailwindCSS, Framer Motion, Three.js y FontAwesome.
 
-## Expanding the ESLint configuration
+Tecnologías principales
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 19 + TypeScript
+- Vite
+- TailwindCSS
+- Framer Motion, Three.js
+- FontAwesome
 
-- Configure the top-level `parserOptions` property like this:
+Instalación y uso
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Requisitos:
+- Node.js (v18+ recomendado)
+- Yarn (opcional, el repo usa yarn en package.json)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Comandos comunes:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Instalar dependencias:
+  yarn install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Ejecutar en desarrollo (con HMR):
+  yarn dev
+
+- Construir para producción:
+  yarn build
+
+- Previsualizar build de producción:
+  yarn preview
+
+- Linter:
+  yarn lint
+
+Despliegue
+
+Opciones comunes:
+
+- Firebase Hosting:
+  1. Ejecutar `yarn build`.
+  2. `firebase deploy --only hosting` (requiere tener firebase-tools configurado y autenticado).
+
+- GitHub Pages / otra CDN:
+  1. Ejecutar `yarn build`.
+  2. Subir el contenido de la carpeta `dist/` al hosting elegido.
+
+Estructura del proyecto
+
+- src/        — código fuente (React, componentes, assets)
+- public/     — archivos públicos estáticos
+- docs/       — contenido adicional (si aplica)
+- package.json— scripts y dependencias
+- vite.config.ts
+
+Notas para desarrolladores
+
+- El meta y la estructura inicial del sitio se pueden encontrar en `index.html` y `src/`.
+- Para añadir nuevas dependencias usar `yarn add <paquete>` y ampliar los tipos si es necesario.
+
+Contribuciones
+
+Se aceptan mejoras y correcciones por PR. Abrir issues para discutir cambios importantes.
+
+Licencia
+
+Este repositorio no especifica una licencia; añadir un fichero LICENSE si se desea publicar con una licencia explícita.
+
+Contacto
+
+Autor: Gian Carlo Marino Polo — ver el sitio para más información.
+
