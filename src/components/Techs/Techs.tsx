@@ -13,142 +13,148 @@ function Techs() {
     const techs: Tech[] = [
         {
             name: "Node",
-            image: "./node.png",
+            image: "./webp/node.webp",
             background: "bg-green-500",
             caption: "Node"
         },
         {
             name: "Deno",
-            image: "./deno.png",
+            image: "./webp/deno.webp",
             background: "bg-white",
             caption: "Deno"
         },
         {
             name: "C#",
-            image: "./csharp.png",
+            image: "./webp/csharp.webp",
             background: "bg-purple-300",
             caption: "C#"
         },
         {
             name: ".NET",
-            image: "./dotnet.png",
+            image: "./webp/dotnet.webp",
             background: "bg-purple-400",
             caption: ".NET"
         },
         {
             name: "Python",
-            image: "./python.png",
+            image: "./webp/python.webp",
             background: "bg-yellow-200",
             caption: "Python"
         },
         {
             name: "Typescript",
-            image: "./typescript.png",
+            image: "./webp/typescript.webp",
             background: "bg-blue-400",
             caption: "Typescript"
         },
         {
             name: "Socket IO",
-            image: "./socketio.png",
+            image: "./webp/socketio.webp",
             background: "bg-white",
             caption: "Socket IO",
         },
         {
             name: "GraphQL",
-            image: "./graphql.png",
+            image: "./webp/graphql.webp",
             background: "bg-purple-500",
             caption: "GraphQL"
         },
         {
             name: "Flutter",
-            image: "./flutter.png",
+            image: "./webp/flutter.webp",
             background: "bg-blue-300",
             caption: "Flutter"
         },
         {
             name: "Postgres",
-            image: "./postgres.png",
+            image: "./webp/postgres.webp",
             background: "bg-blue-500",
             caption: "Postgres"
         },
         {
             name: "MongoDB",
-            image: "./mongo.png",
+            image: "./webp/mongo.webp",
             background: "bg-green-500",
             caption: "MongoDB"
         },
         {
             name: "NestJS",
-            image: "./nest.png",
+            image: "./webp/nest.webp",
             background: "bg-red-300",
             caption: "NestJS"
         },
         {
             name: "Docker",
-            image: "./docker.png",
+            image: "./webp/docker.webp",
             background: "bg-blue-900",
             caption: "Docker"
         },
         {
             name: "Azure",
-            image: "./azure.png",
+            image: "./webp/azure.webp",
             background: "bg-blue-500",
             caption: "Azure"
         },
         {
             name: "Jenkins",
-            image: "./jenkins.png",
+            image: "./webp/jenkins.webp",
             background: "bg-red-500",
             caption: "Jenkins"
         },
         {
             name: "NATS",
-            image: "./nats.png",
+            image: "./webp/nats.webp",
             background: "bg-green-700",
             caption: "NATS"
         },
         {
             name: "RabbitMQ",
-            image: "./rabbit.png",
+            image: "./webp/rabbitmq.webp",
             background: "bg-orange-600",
             caption: "RabbitMQ"
         },
         {
             name: "Git",
-            image: "./git.png",
+            image: "./webp/git.webp",
             background: "bg-orange-700",
             caption: "Git"
         },
         {
             name: "Jira",
-            image: "./jira.png",
+            image: "./webp/jira.webp",
             background: "bg-blue-800",
             caption: "Jira"
         },
         {
             name: "Bitbucket",
-            image: "./bitbucket.png",
+            image: "./webp/bitbucket.webp",
             background: "bg-blue-600",
             caption: "Bitbucket"
         },
         {
             name: "Angular",
-            image: "./angular.png",
+            image: "./webp/angular.webp",
             background: "bg-purple-700",
             caption: "Angular"
         },
         {
             name: "Qwik",
-            image: "./qwik.png",
+            image: "./webp/qwik.webp",
             background: "bg-blue-700",
             caption: "QwikJs"
         },
         {
             name: "React",
-            image: "./react.png",
+            image: "./webp/react.webp",
             background: "bg-blue-600",
             caption: "React"
         },
+        {
+            name: "Mapbox",
+            image: "./webp/mapbox.webp",
+            background: "bg-black",
+            caption: "Mapbox"
+        }
     ];
 
 

@@ -14,7 +14,7 @@ function Header() {
                 {/* 65% 35% 70% 30% / 35% 69% 31% 65% */}
                 <motion.img
                     style={{ borderRadius: "65% 35% 70% 30% / 35% 69% 31% 65%", borderColor: "cyan", borderWidth: "3px", aspectRatio: "1 / 1", objectFit: "cover" }}
-                    whileHover={{ scale: 1.05, borderRadius: "35% 69% 31% 65% / 65% 35% 70% 30%", cursor: "pointer"}} src="me.jpg" alt="" className="h-[300px]" />
+                    whileHover={{ scale: 1.05, borderRadius: "35% 69% 31% 65% / 65% 35% 70% 30%", cursor: "pointer"}} src="webp/me.webp" alt="" className="h-[300px]" />
                 <div className="flex items-center">
                     <RotatingText
                         texts={["Frontend", "Backend", "Mobile"]}

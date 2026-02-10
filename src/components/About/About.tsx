@@ -9,19 +9,19 @@ const experience: CarouselItem[] = [
         title: "Mevolución",
         description: "Desarrollador fullstack (2019-2023)",
         id: 1,
-        icon: (<img src="mevolucion.png" />)
+        icon: (<img src="webp/mevolucion.webp" />)
     },
     {
         title: "Makro Parque",
         description: "Encargado de desarrollo (2023-2025)",
         id: 2,
-        icon: (<img src="makro.png" />)
+        icon: (<img src="webp/makro.webp" />)
     },
     {
         title: "Te Lo Compro",
         description: "Project Manager (Actualmente)",
         id: 3,
-        icon: (<img src="telocompro.jpeg" />)
+        icon: (<img src="webp/telocompro.webp" />)
     },
 ]
 

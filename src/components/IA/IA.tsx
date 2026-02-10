@@ -10,13 +10,13 @@ Diseño y desarrollo de agentes de IA personalizados para atención, análisis, 
 
     const folderItems = [
         <div className="flex items-center justify-center h-full">
-            <img src="./excel.png" className="w-12" />,
+            <img src="./webp/excel.webp" className="w-12" />,
         </div>,
         <div className="flex items-center justify-center h-full">
-            <img src="./googledrive.png" className="w-12" />,
+            <img src="./webp/googledrive.webp" className="w-12" />,
         </div>,
         <div className="flex items-center justify-center h-full">
-            <img src="./telegram.png" className="w-12" />
+            <img src="./webp/telegram.webp" className="w-12" />
         </div>
     ]
 
@@ -43,7 +43,7 @@ Diseño y desarrollo de agentes de IA personalizados para atención, análisis, 
                 chaos={0.12}
                 style={{ borderRadius: 50 }}
             >
-                <img src="./n8n.png" className="w-72 p-7" />
+                <img src="./webp/n8n.webp" className="w-72 p-7" />
             </ElectricBorder>
 
         </div>
