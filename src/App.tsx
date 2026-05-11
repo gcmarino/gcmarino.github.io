@@ -37,7 +37,7 @@ function App() {
         "¡Hola! Soy Asuna, la asistente de Gian :)",
         "Pregúntame lo que quieras sobre él; si quieres mandarle algún mensaje, me lo puedes decir y yo lo enviaré directo a su Telegram."
       ],
-      webhookUrl: 'https://n8n.oh-taku.site/webhook/788c0a7f-745c-40b4-9f15-4a8238755a5a/chat'
+      webhookUrl: 'https://n8n.oh-taku.site/webhook/e95e81e6-5446-4925-8d15-d5d46986bfa6/chat'
     });
   }, []);
 
