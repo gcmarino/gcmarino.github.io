@@ -25,10 +25,10 @@ Diseño y desarrollo de agentes de IA personalizados para atención, análisis, 
 
             <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                 animationSpeed={3}
-                showBorder={false} className="text-5xl">IA - n8n</GradientText>
+                showBorder={false} className="text-xl font-pixel">IA - n8n</GradientText>
 
             <div className="pt-2 flex justify-center">
-                <DecryptedText speed={30} maxIterations={10} text={experience} animateOn="view" className="font-bold" />
+                <DecryptedText speed={30} maxIterations={10} text={experience} animateOn="view" className="font-bold font-pixel text-xs" />
             </div>
 
             <div style={{ height: '200px', position: 'relative', marginTop: '120px' }}>

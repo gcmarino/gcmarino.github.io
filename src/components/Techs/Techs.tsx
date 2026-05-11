@@ -109,7 +109,7 @@ function Techs() {
         },
         {
             name: "RabbitMQ",
-            image: "./webp/rabbitmq.webp",
+            image: "./webp/rabbit.webp",
             background: "bg-orange-600",
             caption: "RabbitMQ"
         },

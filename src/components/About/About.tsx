@@ -33,13 +33,13 @@ function About() {
         <div className="sm:px-5">
             <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                 animationSpeed={3}
-                showBorder={false} className="text-5xl">Acerca de mí</GradientText>
+                showBorder={false} className="text-xl font-pixel">Acerca de mí</GradientText>
             <div className="pt-2 flex justify-center">
-                <DecryptedText speed={30} maxIterations={10} text={about} animateOn="view" className="font-bold" />
+                <DecryptedText speed={30} maxIterations={10} text={about} animateOn="view" className="font-bold font-pixel text-xs" />
             </div>
             <Social />
             <div className="flex justify-center mb-4">
-                <ShinyText text="gcmarino99@gmail.com" speed={3} />
+                <ShinyText text="gcmarino99@gmail.com" speed={3} className="font-pixel text-xs" />
             </div>
         </div>
         <div className="flex justify-center">

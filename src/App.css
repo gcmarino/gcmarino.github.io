@@ -1,0 +1,94 @@
+:root {
+  /* Pixel / 8-bit theme for n8n chat */
+  --chat--font-family: 'Press Start 2P', monospace;
+
+  /* Core colors */
+  --chat--color--primary: #00ffff;
+  --chat--color--primary--shade-100: #00cccc;
+  --chat--color--primary-shade-50: #00e5e5;
+  --chat--color--secondary: #00ffff;
+  --chat--color-dark: #000000;
+  --chat--color-light: #0d0d0d;
+  --chat--color-light-shade-50: #111111;
+  --chat--color-light-shade-100: #161616;
+  --chat--color-medium: #222222;
+  --chat--color-white: #ffffff;
+  --chat--color-typing: #00ffff;
+  --chat--color-disabled: #444444;
+
+  /* Border radius — zero everywhere for pixel look */
+  --chat--border-radius: 0px;
+  --chat--window--border-radius: 0px;
+  --chat--message--border-radius: 0px;
+  --chat--input--border-radius: 0px;
+  --chat--button--border-radius: 0px;
+  --chat--toggle--border-radius: 0px;
+
+  /* Window */
+  --chat--window--border: 2px solid #00ffff;
+  --chat--window--width: 380px;
+
+  /* Header */
+  --chat--header--background: #000000;
+  --chat--header--color: #00ffff;
+  --chat--header--border-bottom: 2px solid #00ffff;
+  --chat--header--border-top: none;
+  --chat--header--border-left: none;
+  --chat--header--border-right: none;
+  --chat--heading--font-size: 10px;
+  --chat--subtitle--font-size: 8px;
+
+  /* Body */
+  --chat--body--background: #000000;
+
+  /* Messages */
+  --chat--message--font-size: 8px;
+  --chat--message-line-height: 1.8;
+  --chat--message--bot--background: #0d0d0d;
+  --chat--message--bot--color: #00ffff;
+  --chat--message--bot--border: 1px solid #00ffff;
+  --chat--message--user--background: #00ffff;
+  --chat--message--user--color: #000000;
+  --chat--message--user--border: none;
+  --chat--message--pre--background: #111111;
+
+  /* Input */
+  --chat--input--background: #000000;
+  --chat--input--text-color: #ffffff;
+  --chat--input--border: 2px solid #00ffff;
+  --chat--input--border-active: 2px solid #ffffff;
+  --chat--input--font-size: 8px;
+  --chat--input--placeholder--font-size: 8px;
+
+  /* Send button */
+  --chat--input--send--button--background: #00ffff;
+  --chat--input--send--button--background-hover: #ffffff;
+  --chat--input--send--button--color: #000000;
+  --chat--input--send--button--color-hover: #000000;
+
+  /* Footer */
+  --chat--footer--background: #000000;
+  --chat--footer--color: #444444;
+
+  /* Toggle (floating button) */
+  --chat--toggle--background: #000000;
+  --chat--toggle--color: #00ffff;
+  --chat--toggle--hover--background: #0d0d0d;
+  --chat--toggle--active--background: #111111;
+  --chat--toggle--size: 56px;
+  --chat--toggle--width: 56px;
+  --chat--toggle--height: 56px;
+
+  /* Button (get started) */
+  --chat--button--background: #00ffff;
+  --chat--button--color: #000000;
+  --chat--button--hover--background: #ffffff;
+  --chat--button--hover--color: #000000;
+  --chat--button--padding: 10px 16px;
+}
+
+/* Pixel border on the toggle button */
+#n8n-chat .chat-toggle {
+  border: 2px solid #00ffff !important;
+  box-shadow: 0 0 0 2px #000, 0 0 0 4px #00ffff;
+}

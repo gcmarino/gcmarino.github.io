@@ -17,9 +17,9 @@ Complemento mi perfil con experiencia básica en la gestión de proyectos de des
         <div className="sm:px-5">
             <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                 animationSpeed={3}
-                showBorder={false} className="text-5xl">Experiencia</GradientText>
+                showBorder={false} className="text-xl font-pixel">Experiencia</GradientText>
             <div className="pt-2 flex justify-center">
-                <DecryptedText speed={30} maxIterations={10} text={experience} animateOn="view" className="font-bold" />
+                <DecryptedText speed={30} maxIterations={10} text={experience} animateOn="view" className="font-bold font-pixel text-xs" />
             </div>
         </div>
     </section>
