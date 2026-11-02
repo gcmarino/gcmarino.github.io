@@ -118,7 +118,11 @@ function Hero() {
     const el = document.getElementById(id);
     if (el) window.scrollTo({ top: el.offsetTop - 70, behavior: "smooth" });
   };
+  const scene = useScene("mountHero");
   return (
+    <div className="hero-stage">
+    {scene.status !== "failed" && <canvas ref={scene.ref} className="hero-canvas" aria-hidden="true" />}
+    <div className="hero-fade" aria-hidden="true" />
     <section id="inicio" className="section" style={{ paddingTop: "clamp(40px,8vw,90px)" }}>
       <div style={{
         display: "grid",
@@ -200,6 +204,7 @@ function Hero() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 

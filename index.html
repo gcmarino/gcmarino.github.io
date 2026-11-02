@@ -26,6 +26,19 @@
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
+  <!-- Three.js scenes (ES modules). React waits on window.scenesReady; falls back to plain HTML on failure. -->
+  <script>
+    window.scenesReady = new Promise(function (resolve, reject) {
+      window.__scenes = { resolve: resolve, reject: reject };
+      setTimeout(function () { reject(new Error("Three.js no cargó a tiempo")); }, 15000);
+    });
+    window.scenesReady.catch(function () {});
+  </script>
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="three/index.js"></script>
+
   <script src="data.js"></script>
   <script src="image-slot.js"></script>
 

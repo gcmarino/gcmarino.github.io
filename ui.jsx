@@ -188,4 +188,31 @@ function ProjectCover({ icon = "phone", color = "var(--accent)", label, height =
   );
 }
 
-Object.assign(window, { Glitch, SectionHead, Reveal, PixelSprite, SPRITES, ProjectCover });
+// Mount a Three.js scene (see three/index.js) on a canvas.
+// status: "loading" | "ready" | "failed". On "failed" render the plain HTML fallback.
+function useScene(name, opts) {
+  const ref = useRef(null);
+  const api = useRef(null);
+  const [status, setStatus] = useState("loading");
+  useEffect(() => {
+    let alive = true;
+    window.scenesReady
+      .then((S) => {
+        if (!alive || !ref.current) return;
+        api.current = S[name](ref.current, opts || {});
+        setStatus("ready");
+      })
+      .catch((e) => {
+        console.warn("[3D] " + name + ":", e);
+        if (alive) setStatus("failed");
+      });
+    return () => {
+      alive = false;
+      if (api.current) api.current.dispose();
+      api.current = null;
+    };
+  }, []);
+  return { ref, api, status };
+}
+
+Object.assign(window, { Glitch, SectionHead, Reveal, PixelSprite, SPRITES, ProjectCover, useScene });
