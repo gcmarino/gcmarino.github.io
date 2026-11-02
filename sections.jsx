@@ -208,11 +208,9 @@ function ProjectsGrid() {
   );
 }
 
-function Experience() {
+function ExperienceTimeline() {
   const d = window.DATA;
   return (
-    <section id="experiencia" className="section">
-      <SectionHead index="04" title="Experiencia" />
       <div style={{ position: "relative", paddingLeft: 28 }}>
         {/* vertical track */}
         <div style={{ position: "absolute", left: 6, top: 8, bottom: 8, width: 3, background: "repeating-linear-gradient(to bottom, var(--line-2) 0 6px, transparent 6px 12px)" }} />
@@ -238,6 +236,108 @@ function Experience() {
           </Reveal>
         ))}
       </div>
+  );
+}
+
+// Chronological levels grouped into worlds by country ("REMOTO" for remote roles).
+function buildLevels(experience) {
+  const chrono = experience.map((e, i) => ({ e, i })).reverse();
+  const levels = [];
+  let world = -1, last = null, n = 0;
+  chrono.forEach(({ e, i }) => {
+    const name = /remoto/i.test(e.org) ? "REMOTO"
+      : /bolivia/i.test(e.org) ? "BOLIVIA"
+      : /colombia/i.test(e.org) ? "COLOMBIA" : "MUNDO";
+    if (name !== last) { world++; last = name; n = 0; }
+    n++;
+    levels.push({ id: `${world + 1}-${n}`, world, worldName: name, exp: e, current: /actual/i.test(e.period) });
+  });
+  return levels;
+}
+
+// Level map: sticky 3D map, scroll through the level cards to move the player.
+function Experience() {
+  const d = window.DATA;
+  const levels = React.useMemo(() => buildLevels(d.experience), []);
+  const cards = React.useRef([]);
+  const [active, setActive] = React.useState(0);
+  const scrollToLevel = (k) => {
+    const el = cards.current[k];
+    if (el) window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - window.innerHeight * 0.45, behavior: "smooth" });
+  };
+  const scene = useScene("mountExperience", {
+    levels: levels.map(({ id, world, worldName }) => ({ id, world, worldName })),
+    onSelect: scrollToLevel,
+  });
+
+  React.useEffect(() => {
+    if (scene.status !== "ready") return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const line = window.innerHeight * 0.55;
+      const anchors = cards.current.map((el) => el.getBoundingClientRect().top + 90);
+      let p = 0;
+      if (line >= anchors[anchors.length - 1]) p = anchors.length - 1;
+      else for (let i = 0; i < anchors.length - 1; i++) {
+        if (line >= anchors[i] && line < anchors[i + 1]) { p = i + (line - anchors[i]) / (anchors[i + 1] - anchors[i]); break; }
+      }
+      scene.api.current.setProgress(p);
+      setActive(Math.round(p));
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [scene.status]);
+
+  return (
+    <section id="experiencia" className="section">
+      <SectionHead index="04" title="Experiencia" />
+      {scene.status === "failed" ? <ExperienceTimeline /> : (
+        <div className="exp-split">
+          <div className="exp-map pbox">
+            <canvas ref={scene.ref} className="scene-canvas" aria-label="Mapa 3D de niveles de experiencia" />
+            <span className="scene-hint pixel">HAZ SCROLL PARA AVANZAR · CLIC EN UN NIVEL</span>
+            <span className="exp-hud pixel">
+              NIVEL {levels[active].id} · {levels[active].worldName}
+            </span>
+          </div>
+          <ol className="exp-levels">
+            {levels.map((l, k) => (
+              <li
+                key={l.id}
+                ref={(el) => (cards.current[k] = el)}
+                className={"pbox exp-card" + (k === active ? " is-active" : "") + (k > active ? " is-locked" : "")}
+              >
+                <div className="exp-card-top">
+                  <span className="pixel" style={{ fontSize: 10, color: "var(--accent-2)" }}>
+                    {k > active ? "▫ " : "► "}NIVEL {l.id} · MUNDO {l.worldName}
+                  </span>
+                  {l.current && <span className="pixel exp-now">★ ACTUAL</span>}
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 8 }}>
+                  <h3 className="display" style={{ fontSize: 14, margin: 0, lineHeight: 1.4 }}>{l.exp.role}</h3>
+                  <span className="pixel" style={{ fontSize: 10, color: "var(--accent-3)" }}>{l.exp.period}</span>
+                </div>
+                <div className="pixel accent" style={{ fontSize: 11, marginBottom: 10 }}>{l.exp.org}</div>
+                <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gap: 6 }}>
+                  {l.exp.bullets.map((b, j) => (
+                    <li key={j} className="muted" style={{ fontSize: 20, display: "flex", gap: 10 }}>
+                      <span className="accent" style={{ flex: "none" }}>▪</span><span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
     </section>
   );
 }
