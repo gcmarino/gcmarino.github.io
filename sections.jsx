@@ -14,12 +14,6 @@ function About() {
               </p>
             </Reveal>
           ))}
-          <p className="eyebrow" style={{ margin: "8px 0 12px" }}>Aptitudes</p>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {d.aptitudes.map((t) => (
-              <span key={t} className="chip">{t}</span>
-            ))}
-          </div>
         </div>
 
         {/* stats grid */}
@@ -355,7 +349,7 @@ function Contact() {
           <Glitch text="Hagamos algo" anim />
         </h2>
         <p className="muted" style={{ fontSize: 22, maxWidth: 460, margin: "0 auto 30px" }}>
-          ¿Tienes un proyecto en mente? Escríbeme.
+          Si tienes un proyecto entre manos o quieres preguntarme por algo de lo que ves aquí, escríbeme.
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           {d.social.map((s) => (
