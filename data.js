@@ -1,7 +1,7 @@
 window.DATA = {
   name: "Gian Carlo Marino Polo",
   shortName: "Gian Marino",
-  photo: "https://rustfs.oh-taku.site/public/pp.jpg",
+  photo: "https://rustfs.oh-taku.com/public/pp.jpg",
   handle: "GC_MARINO",
   role: "Fullstack & Mobile Developer",
   tagline: "Trabajo en backend, apps móviles y automatización. Ahora mismo, sobre todo con agentes de IA y n8n.",
@@ -65,9 +65,9 @@ window.DATA = {
     ]}
   ],
   social: [
-    { label: "Email", handle: "gian@oh-taku.site", href: "mailto:gian@oh-taku.site" },
+    { label: "Email", handle: "gian@oh-taku.com", href: "mailto:gian@oh-taku.com" },
     { label: "Gmail", handle: "gcmarino99@gmail.com", href: "mailto:gcmarino99@gmail.com" },
     { label: "GitHub", handle: "gcmarino.github.io", href: "https://gcmarino.github.io" },
-    { label: "Web", handle: "giancarlo.oh-taku.site", href: "https://giancarlo.oh-taku.site" }
+    { label: "Web", handle: "giancarlo.oh-taku.com", href: "https://giancarlo.oh-taku.com" }
   ]
 };
