@@ -23,7 +23,7 @@ window.DATA = {
     { cat: "Frontend y móvil", items: ["Angular","React","Tailwind","Flutter"] },
     { cat: "Bases de datos", items: ["Postgres","SQL Server","MongoDB"] },
     { cat: "Tiempo real y microservicios", items: ["SocketIO","SignalR","NATS","RabbitMQ","gRPC"] },
-    { cat: "DevOps", items: ["Docker","Bitbucket Pipelines","GitHub Actions","Linux (Ubuntu/Debian)"] },
+    { cat: "DevOps", items: ["Docker","Kubernetes","Bitbucket Pipelines","GitHub Actions","Linux (Ubuntu/Debian)"] },
     { cat: "IA y automatización", items: ["n8n","Ollama","OpenAI","Gemini"] },
     { cat: "Mapas", items: ["Mapbox","Leaflet","Google Maps"] },
     { cat: "Herramientas", items: ["Git","GitHub","Bitbucket","Jira"] }
@@ -37,7 +37,13 @@ window.DATA = {
     { title: "Chatbots con IA", icon: "chat", image: "", tags: ["n8n","ChatGPT","MCP","RAG","Telegram"], desc: "Agentes y chatbots armados en n8n con ChatGPT, MCP y RAG. Uno de ellos es un bot de Telegram conectado a servicios y automatizaciones internas de la empresa.", hue: 1 }
   ],
   experience: [
-    { role: "Mid Level Software Developer", org: "Softgic, Colombia - Remoto", period: "Febrero 2026 - Actualmente", bullets: [
+    { role: "Full Stack Software Developer", org: "Nexocorp, Santa Cruz de la Sierra - Bolivia", period: "Noviembre 2026 - Actualmente", bullets: [
+      "Desarrollo apps móviles con Flutter.",
+      "Construyo servicios backend con .NET y Node.js.",
+      "Gestiono clústeres de Kubernetes y manejo contenedores con Docker.",
+      "Integro la plataforma con servicios y APIs externas."
+    ]},
+    { role: "Mid Level Software Developer", org: "Softgic, Colombia - Remoto", period: "Febrero 2026 - Noviembre 2026", bullets: [
       "Construyo agentes de IA y automatizaciones para procesos de empresa con n8n y ChatGPT.",
       "Armo workflows y subworkflows pensados para reutilizarse, en vez de repetir la misma lógica en cada automatización.",
       "Conecto sistemas entre sí con APIs REST, webhooks y servicios externos.",
