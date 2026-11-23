@@ -74,6 +74,6 @@ window.DATA = {
     { label: "Email", handle: "gian@oh-taku.com", href: "mailto:gian@oh-taku.com" },
     { label: "Gmail", handle: "gcmarino99@gmail.com", href: "mailto:gcmarino99@gmail.com" },
     { label: "GitHub", handle: "gcmarino.github.io", href: "https://gcmarino.github.io" },
-    { label: "Web", handle: "giancarlo.oh-taku.com", href: "https://giancarlo.oh-taku.com" }
+    { label: "Web", handle: "gian.oh-taku.com", href: "https://gian.oh-taku.com" }
   ]
 };
