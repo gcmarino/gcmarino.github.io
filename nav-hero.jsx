@@ -168,6 +168,9 @@ function Hero() {
             <button className="btn" onClick={() => go("contacto")}>
               CONTACTO
             </button>
+            <a className="btn" href={d.cv} download>
+              ▼ DESCARGAR CV
+            </a>
           </div>
         </div>
 

@@ -7,6 +7,7 @@ window.DATA = {
   tagline: "Trabajo en backend, apps móviles y automatización. Ahora mismo, sobre todo con agentes de IA y n8n.",
   location: "Santa Cruz, Bolivia",
   available: true,
+  cv: "uploads/cv-gian-marino.pdf",
   intro: [
     "Soy desarrollador full stack. Trabajo sobre todo con Node.js, JavaScript y C#, y he pasado por casi todas las capas: APIs, apps móviles en Flutter, aplicaciones web en Angular y, últimamente, muchas automatizaciones con n8n e integraciones con IA.",
     "Buena parte de lo que he construido se usa en operaciones del día a día: inventario, picking, checklists, órdenes de compra. Me gusta ese tipo de trabajo porque el problema es concreto y se nota enseguida si la solución sirve o no.",
